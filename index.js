@@ -73,6 +73,12 @@ else
 		console.log('Token found');
 
 		const data = JSON.stringify({
+			EntityId: 1,
+			Templates: [{
+					TemplateId: 1,
+					SubFolders: ''
+				}
+			]
 		});
 	
 		const options = {
@@ -97,7 +103,8 @@ else
 	
 			res.on('data', d => {
 				
-				console.log(d.toString());
+				const result = JSON.parse(d.toString())
+				console.log(result);
 			})
 		})
 	
