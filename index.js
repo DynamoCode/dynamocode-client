@@ -8,7 +8,20 @@ const https = require('http')
 
 const argv = yargs
 	.command('login', 'Ask for credentials to authenticate')
-	.command('exec', 'Execute command')
+	.command('exec', 'Execute command', {
+		template: {
+			description: 'Template(s) to use to generate code.',
+			alias: 't',
+			demand: true
+		},
+		entity: {
+			description: 'Entity to generate the code for.',
+			alias: 'e',
+			type: 'number',
+			demand: true
+		}
+	})
+	.demandCommand(1, 'At least one command is required, see usage for options.')
 	.help()
 	.argv;
 
@@ -42,7 +55,7 @@ if (argv._.includes('login')) {
 		if (res.statusCode == 200) {
 			console.log('Authentication successful');
 		} else {
-			console.log('Authentication failed');
+			console.log('Authentication failed'); 
 		}
 
 		res.on('data', d => {
@@ -73,9 +86,9 @@ else
 		console.log('Token found');
 
 		const data = JSON.stringify({
-			EntityId: 1,
+			EntityId: argv.entity,
 			Templates: [{
-					TemplateId: 1,
+					TemplateId: argv.template,
 					SubFolders: ''
 				}
 			]

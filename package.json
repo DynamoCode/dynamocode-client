@@ -1,15 +1,24 @@
 {
-  "name": "generator",
+  "name": "@dynamo-code/dynamocode",
   "version": "0.0.1",
   "description": "code generator client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Abel Perez, Nestor Collazo",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10",
     "yargs": "^14.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DynamoCode/dynamocode-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DynamoCode/dynamocode-client/issues"
+  },
+  "homepage": "https://github.com/DynamoCode/dynamocode-client#readme"
 }
