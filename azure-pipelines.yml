@@ -28,7 +28,7 @@ steps:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: |
       *.js
-      bin\**
+      bin/**
       package.json
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
