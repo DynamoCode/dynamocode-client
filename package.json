@@ -1,6 +1,6 @@
 {
   "name": "@dynamo-code/dynamocode",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "code generator client",
   "main": "index.js",
   "bin": {
