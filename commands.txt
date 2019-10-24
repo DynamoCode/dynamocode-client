@@ -2,3 +2,4 @@ npm login --registry=https://registry.npmjs.org/
 
 npm publish --access public --registry=https://registry.npmjs.org/
 
+npm install -g @dynamo-code/dynamocode
