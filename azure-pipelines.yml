@@ -19,7 +19,7 @@ steps:
 
 - script: |
     npm install
-    npm version $(Build.BuildNumber)
+    npm version $(Build.BuildNumber) --no-git-tag-version
 #    npm run build
   displayName: 'npm install and build'
 
