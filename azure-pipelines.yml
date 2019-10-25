@@ -24,11 +24,17 @@ steps:
 #    npm run build
   displayName: 'npm install and build'
 
-- task: CopyFiles@2
+# - task: CopyFiles@2
+#   inputs:
+#     SourceFolder: '$(System.DefaultWorkingDirectory)'
+#     Contents: '*.tgz'
+#     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: ExtractFiles@1
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: '*.tgz'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    archiveFilePatterns: '*.tgz' 
+    destinationFolder: '$(Build.ArtifactStagingDirectory)'
+    cleanDestinationFolder: true 
 
 - task: PublishBuildArtifacts@1
   inputs:
