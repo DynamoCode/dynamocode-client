@@ -1,5 +1,9 @@
+# authenticate and publish 
 npm login --registry=https://registry.npmjs.org/
-
 npm publish --access public --registry=https://registry.npmjs.org/
 
+# add internal registry
+sudo npm config set @dynamo-code:registry https://pkgs.dev.azure.com/dynamocode/dynamocode-client/_packaging/InternalNpm/npm/registry/
+
+# install globally
 npm install -g @dynamo-code/dynamocode
