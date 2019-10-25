@@ -5,12 +5,8 @@
 
 name: $(majorMinorVersion)-alpha$(revision)
 
-# 1.0.$(rev:r)-alpha2
-
 variables:
   majorMinorVersion: 0.0.0
-  # semanticVersion counter is automatically incremented by one in each execution of pipeline
-  # second parameter is seed value to reset to every time the referenced majorMinorVersion is changed
   revision: $[counter(variables['majorMinorVersion'], 0)]
 
 trigger:
