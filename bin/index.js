@@ -18,7 +18,6 @@ if (argv._.includes('login')) {
 }
 else
     if (argv._.includes('exec')) {
-        console.log('exec command');
 
         if (!login.isAuthenticated()) {
             console.log('No authentication token found, please use login command');

@@ -7,3 +7,16 @@ sudo npm config set @dynamo-code:registry https://pkgs.dev.azure.com/dynamocode/
 
 # install globally
 npm install -g @dynamo-code/dynamocode
+
+
+[ 
+    { 
+        filePath: 'Root\\Domain\\',
+        fileName: 'Person.cs',
+        textCode: 'public class Person\r\n{\r\n    public int Id { get; set; }\r\n    public string Name { get; set; }\r\n    public int Age { get; set; }\r\n    public string Job { get; set; }\r\n}',
+        folderList: 
+            [ 
+                'Root', 'Domain', '' 
+            ] 
+    } 
+]
