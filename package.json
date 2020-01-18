@@ -1,32 +1,35 @@
 {
-  "name": "@dynamo-code/dynamocode",
-  "version": "0.0.0",
-  "description": "code generator client",
-  "main": "index.js",
-  "bin": {
-    "dynamocode": "./bin/index.js"
-  },
-  "files": [
-    "/bin",
-    "/lib"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "preferGlobal": true,
-  "author": "Abel Perez, Nestor Collazo",
-  "license": "ISC",
-  "dependencies": {
-    "readline-sync": "^1.4.10",
-    "yargs": "^14.2.0"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DynamoCode/dynamocode-client.git"
-  },
-  "bugs": {
-    "url": "https://github.com/DynamoCode/dynamocode-client/issues"
-  },
-  "homepage": "https://github.com/DynamoCode/dynamocode-client#readme"
+    "name": "@dynamo-code/dynamocode",
+    "version": "0.0.0",
+    "description": "code generator client",
+    "main": "index.js",
+    "bin": {
+        "dynamocode": "./bin/index.js"
+    },
+    "files": [
+        "/bin",
+        "/lib"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+        "node": ">=10.0"
+    },
+    "preferGlobal": true,
+    "author": "Abel Perez, Nestor Collazo",
+    "license": "ISC",
+    "dependencies": {
+        "readline-sync": "^1.4.10",
+        "yargs": "^14.2.0"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DynamoCode/dynamocode-client.git"
+    },
+    "bugs": {
+        "url": "https://github.com/DynamoCode/dynamocode-client/issues"
+    },
+    "homepage": "https://github.com/DynamoCode/dynamocode-client#readme"
 }
