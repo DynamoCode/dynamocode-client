@@ -21,9 +21,8 @@
     "license": "ISC",
     "dependencies": {
         "readline-sync": "^1.4.10",
-        "yargs": "^14.2.0"
+        "yargs": "^17.3.0"
     },
-    "devDependencies": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DynamoCode/dynamocode-client.git"
