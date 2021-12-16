@@ -20,3 +20,60 @@ npm install -g @dynamo-code/dynamocode
             ] 
     } 
 ]
+
+# run locally 
+
+$ node ./bin/index.js login
+
+Username: abelperezok@gmail.com
+Password: **************
+Authentication successful
+Token saved
+
+$ node ./bin/index.js exec -e 22 -t "43,44,45,46,47,48"
+
+
+# run deployed version
+
+$ dynamocode login
+
+$ dynamocode exec -e 22 -t "43,44,45,46,47,48"
+
+
+## local API invocations 
+
+1. grab the token
+
+TOKEN=$(cat /tmp/token)
+
+curl -d '{
+    "EntityId": 22,
+    "Templates": [{
+            "TemplateId": "43",
+            "FilePath": ""
+        },
+        {
+            "TemplateId": "44",
+            "FilePath": ""
+        },
+        {
+            "TemplateId": "45",
+            "FilePath": ""
+        },
+        {
+            "TemplateId": "46",
+            "FilePath": ""
+        },
+        {
+            "TemplateId": "47",
+            "FilePath": ""
+        },
+        {
+            "TemplateId": "48",
+            "FilePath": ""
+        }        
+    ]
+}' \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $TOKEN" \
+https://www.dynamocode.com/api/dynamocode 
